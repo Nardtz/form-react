@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { CSSTransitionGroup } from "react-transition-group";
+import FooterSection from "./BottomSection/Footer";
 import "./App.css";
 import "./CssModule/normalize.css";
 import "./CssModule/section.css";
@@ -60,12 +60,31 @@ class App extends Component {
                     ? "Get Started"
                     : "Request Information"}
                 </button>
+                {this.state.showSecondFormFields === true ? (
+                  <div>
+                    <h6>
+                      By submitting this form, you agree to
+                      Assisted-living.com's{" "}
+                      <a href="privacy-policy.html" target="_blank">
+                        Privacy Policy
+                      </a>
+                      , <a href="#">Terms of Use</a>, and Agreement to be
+                      Contacted by Telephone.
+                    </h6>
+                    <h5 className="back" onClick={this.toggleFormFields}>
+                      BACK
+                    </h5>
+                  </div>
+                ) : null}
               </div>
             </div>
           </div>
         </section>
         <section>
           <BottomSection />
+        </section>
+        <section>
+          <FooterSection />
         </section>
       </div>
     );

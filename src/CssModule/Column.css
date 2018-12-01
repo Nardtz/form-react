@@ -73,6 +73,27 @@ select {
   background: #3f60ad;
   border: 1px solid #10307c;
 }
+
+h6 {
+  font-size: 10px;
+  font-weight: 300;
+  max-width: 18rem;
+  margin-top: 1rem;
+}
+
+h5.back {
+  color: green;
+  cursor: pointer;
+}
+
+h5.back:hover {
+  color: blue;
+}
+h5.back:before {
+  content: "<<";
+  margin-right: 0.5rem;
+}
+
 @media screen and (max-width: 36rem) {
 }
 @media screen and (max-width: 36rem) {
